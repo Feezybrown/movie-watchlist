@@ -1,0 +1,304 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;     
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    margin-bottom: 2em;
+}
+
+
+/* Layouts */
+
+.intro {
+    flex-direction: column;
+    min-height: 250px;
+    background: black url("images/background.png");
+    background-size: cover;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+}
+
+
+.main-container,
+.watchlist-container {
+    flex-direction: column;
+    position: relative;
+}
+
+
+.motion-text {
+    position: relative;
+    top: 25vh;
+    text-align: center;
+    color: #787878;
+}
+
+
+/* Search field styling */
+
+.search-container {
+    position: absolute;
+    bottom: 68.5%;
+    top: 31.5%;
+    left: 50%;
+    width: 70%;
+    max-width: 35em;
+    transform: translate(-50%, -50%);
+    height: 2.5em;
+    background-color: #2E2E2F;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding-left: 1em;
+    z-index: 1;
+}
+
+
+div > input {
+    height: 2.5em;
+    height: 100%;
+    /* width: 100%; */
+    width: 14em;
+    border: none;
+    outline: none;
+    background-color: #2E2E2F;
+    font: inherit;
+    color: white;
+    padding: 0.5em;
+    flex: 3;
+}
+
+button {
+    height: 2.5em;
+    width: 5em;
+    font: inherit;
+    background-color: #4b4b4b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* Display field styling */
+
+.card {
+    justify-content: space-between;
+    gap: 1em;
+    border-bottom: 1px solid #2c2c2c;
+    width: 85%;
+    padding: 1.5em 0;
+}
+
+.movie-img {
+    height: 9em;
+    width: 6em;
+    border-radius: 0.3em;
+}
+
+.card-contents {
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+.card-title-wrapper {
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.add-to-watchList {
+    gap: 0.2em;
+}
+
+.rating {
+    gap: 0.25em;
+}
+
+.score {
+    margin-left: 0.2em;
+}
+
+
+.movie-stats,
+.add-movies {
+    gap: 0.5em;
+}
+
+.runtime, 
+.genre, 
+.fa-circle-plus,
+.add-to-watchList p,
+.rating,
+.plot {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+
+.card-title {
+    margin: 0;
+}
+
+.add-to-watchList:hover p{
+    color: #fec654;
+}
+
+.plot {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    max-width: 400px;
+}
+  
+.card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.card:first-child {
+    margin-top: 3em;
+}
+
+/* multiples */
+
+.add-movies,
+.movie-stats,
+.rating,
+.add-to-watchList,
+.card-title-wrapper,
+.card,
+.search-container,
+.main-container,
+.watchlist-container,
+.intro {
+    display: flex;
+    align-items: center;
+}
+
+.intro,
+.main-container,
+.watchlist-container {
+    justify-content: center;
+}
+
+/* Typography */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.explore,
+.watchlist-text,
+.plot {
+    color: #7b7b7b;
+}
+
+.add-movies {
+    text-align: center;
+}
+
+.watchlist-text {
+    margin-bottom: 0;
+}
+
+.card-title {
+    font-size: 1.2em;
+}
+
+.add-to-watchList p {
+    cursor: pointer;
+}
+
+/* icons */
+
+.add-to-watchList .fa-circle-check {
+    color: #fec654 !important;
+    font-size: 0.8rem;
+}
+
+.add-to-watchList .fa-circle-minus {
+    font-size: 0.8rem;
+}
+
+.add-to-watchList:hover .fa-circle-minus{
+    transform: scale(1.1);
+}
+
+.fa-film {
+    font-size: 3rem;
+}
+
+.fa-star {
+    color: #fec654;
+    font-size: 0.7rem;
+}
+
+.fa-circle-plus {
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.add-to-watchList:hover .fa-circle-plus{
+    transform: scale(1.1);
+}
+
+@media (min-width: 576px) {
+    .intro{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding-left: 5em;
+        padding-right: 5em;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 3vw;   /*changes relative to the screen*/
+    }
+
+    div > input {
+        width: 17em;
+    }
+
+    /* Displat page layout */
+
+    .card {
+        width: 50%;
+        max-width: 35em;
+    }
+
+    .runtime, 
+    .genre, 
+    .fa-circle-plus,
+    .add-to-watchList p,
+    .rating,
+    .fa-star,
+    .plot {
+        font-size: 1rem;
+    }
+
+    .fa-star {
+        font-size: 0.8rem;
+    }
+
+    .fa-circle-plus {
+        font-size: 0.8rem;
+    }
+
+    .movie-stats {
+        gap: 1.5em;
+    }
+}
+
+
